@@ -14,12 +14,13 @@
     <meta property="og:image" content="https://evgenie3311.github.io/Evgenie3311.png">
     <meta property="og:url" content="https://evgenie3311.github.io">
     <meta property="og:type" content="website">
-    <audio id="background-music" preload="metadata" loop>
-    <source src="https://github.com/Evgenie3311/evgenie3311.github.io/raw/refs/heads/main/six.mp3" type="audio/mp3">
-</audio>
     <title>⚡ Evgenie3311</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         
         body {
             background: #000000;
@@ -52,9 +53,9 @@
 
         .header-container {
             padding: 25px;
-            border: 1px solid rgba(255,255,255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 15px;
-            background: rgba(0,0,0, 0.3);
+            background: rgba(0, 0, 0, 0.3);
             backdrop-filter: blur(2px);
         }
 
@@ -86,9 +87,9 @@
 
         .player-container {
             padding: 20px;
-            border: 1px solid rgba(255,255,255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 15px;
-            background: rgba(0,0,0, 0.3);
+            background: rgba(0, 0, 0, 0.3);
             backdrop-filter: blur(2px);
         }
 
@@ -145,7 +146,7 @@
 
         .progress-bar {
             height: 4px;
-            background: rgba(255,255,255, 0.1);
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 2px;
             margin-bottom: 8px;
             overflow: hidden;
@@ -173,7 +174,7 @@
             gap: 8px;
             margin-top: 15px;
             padding-top: 15px;
-            border-top: 1px solid rgba(255,255,255, 0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
             font-size: 0.85rem;
         }
 
@@ -187,10 +188,10 @@
         }
 
         .content {
-            background: rgba(0,0,0, 0.4);
+            background: rgba(0, 0, 0, 0.4);
             padding: 30px;
             border-radius: 12px;
-            border: 1px solid rgba(255,255,255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.15);
             margin-bottom: 30px;
         }
         
@@ -235,7 +236,7 @@
             display: flex;
             justify-content: center;
             gap: 12px;
-            margin-top: 5px;
+            margin-top: 15px;
         }
         
         .social-link {
@@ -296,206 +297,220 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="left-column">
-            <div class="header-container">
-                <div class="avatar-placeholder">
-                    <img src="Evgenie3311.png" alt="Аватар" width="100" height="100">
+    <audio id="background-music" preload="metadata" loop>
+        <source src="https://evgenie3311.github.io/six.mp3" type="audio/mp3">
+    </audio>
+    <div class="js-required" style="display: none;">
+        <div class="container">
+            <div class="left-column">
+                <div class="header-container">
+                    <div class="avatar-placeholder">
+                        <img src="Evgenie3311.png" alt="Аватар" width="100" height="100">
+                    </div>
+                    <div class="title-section">
+                        <div class="nickname">Evgenie3311</div>
+                        <p class="subtitle">Located at 192.168.0.10</p>
+                    </div>
                 </div>
-                <div class="title-section">
-                    <div class="nickname">Evgenie3311</div>
-                    <p class="subtitle">Located at 192.168.0.10</p>
+                
+                <div class="player-container">
+                    <div class="player-header">
+                        <div class="player-icon">
+                            <img src="https://i1.sndcdn.com/artworks-vWatDdABwzJUKjG3-bMBNJg-t500x500.jpg" alt="six - C418">
+                        </div>
+                        <div class="player-title">
+                            <div class="player-song">six</div>
+                            <div class="player-artist">C418</div>
+                        </div>
+                        <div class="js-required" id="main-content">
+                            <button class="player-btn play-pause">▶</button>
+                        </div>
+                    </div>
+                    
+                    <div class="player-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <div class="time-display">
+                            <span class="current-time">0:00</span>
+                            <span class="total-time">10:26</span>
+                        </div>
+                    </div>
+                    
+                    <div class="player-status">
+                        <span class="status-indicator">●</span>
+                        <span class="status-text">Now playing</span>
+                    </div>
                 </div>
             </div>
             
-            <div class="player-container">
-                <div class="player-header">
-                    <div class="player-icon">
-                        <img src="https://i1.sndcdn.com/artworks-vWatDdABwzJUKjG3-bMBNJg-t500x500.jpg" alt="six - C418">
+            <div class="right-content">
+                <div class="content">
+                    <h2>👨‍💻 About</h2>
+                    <p>🎄 One day you'll see something there.. Well, it is still a secret to strangers..</p>
+                    
+                    <div class="terminal">
+                        <div class="prompt">$ whoami</div>
+                        <div>Evgenie3311-PC\Evgenie3311</div>
+                        <br>
+                        <div class="prompt">$ cat bio.txt</div>
+                        <div>likes nature, cybersecurity, developerment, tech and system administration.</div>
+                        <br>
+                        <div class="prompt">$ find ./Projects -type f</div>
+                        <div>./Projects/ThePolygon</div>
+                        <div>./Projects/IWasNeverHere</div>
+                        <div>./Projects/QPS</div>
+                        <div>./Projects/Secret</div>
+                        <br>
+                        <div class="prompt">$ python main.py</div>
+                        <div>Your IP: ...</div>
+                        <div>Your browser: ...</div>
+                        <div>Your OS: ...</div>
                     </div>
-                    <div class="player-title">
-                        <div class="player-song">six - C418</div>
-                        <div class="player-artist">Minecraft Volume Alpha</div>
-                    </div>
-                    <button class="player-btn play-pause">▶</button>
-                </div>
-                
-                <div class="player-progress">
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 0%"></div>
-                    </div>
-                    <div class="time-display">
-                        <span class="current-time">0:00</span>
-                        <span class="total-time">10:26</span>
-                    </div>
-                </div>
-                
-                <div class="player-status">
-                    <span class="status-indicator">●</span>
-                    <span class="status-text">Now playing</span>
                 </div>
             </div>
         </div>
         
-        <div class="right-content">
-            <div class="content">
-                <h2>👨‍💻 About</h2>
-                <p>🎄 One day you'll see something there.. Well, it is still a secret to strangers..</p>
-                
-                <div class="terminal">
-                    <div class="prompt">$ whoami</div>
-                    <div>Evgenie3311-PC\Evgenie3311</div>
-                    <br>
-                    <div class="prompt">$ cat bio.txt</div>
-                    <div>likes nature, cybersecurity, developerment, tech and system administration.</div>
-                    <br>
-                    <div class="prompt">$ find ./Projects -type f</div>
-                    <div>./Projects/ThePolygon</div>
-                    <div>./Projects/IWasNeverHere</div>
-                    <div>./Projects/QPS</div>
-                    <div>./Projects/Secret</div>
-                    <br>
-                    <div class="prompt">$ python main.py</div>
-                    <div>Your IP: ...</div>
-                    <div>Your browser: ...</div>
-                    <div>Your OS: ...</div>
-                </div>
+        <footer>
+            <p>What are you looking for?</p>
+            <div class="social-links">
+                <a href="https://github.com/evgenie3311" class="social-link" target="_blank">GitHub</a>
+                <a href="https://t.me/Evgenie3311" class="social-link" target="_blank">Telegram</a>
+                <a href="https://steamcommunity.com/id/Evgenie3311" class="social-link" target="_blank">Steam</a>
+                <a href="https://youtube.com/@Evgenie3311" class="social-link" target="_blank">YouTube</a>
             </div>
-        </div>
+            <p style="margin-top: 20px; color: #a5d8ff; font-size: 0.8rem;">© 2026 Evgenie3311</p>
+        </footer>
     </div>
-    
-    <footer>
-        <div class="social-links">
-            <a href="https://github.com/evgenie3311" class="social-link" target="_blank">GitHub</a>
-            <a href="https://t.me/Evgenie3311" class="social-link" target="_blank">Telegram</a>
-            <a href="https://steamcommunity.com/id/Evgenie3311" class="social-link" target="_blank">Steam</a>
-            <a href="https://youtube.com/@Evgenie3311" class="social-link" target="_blank">YouTube</a>
-        </div>
+    <div class="no-js">
+        <h1>Evgenie3311 was there, with a beautiful site as well.. But you're using a browser with JS turned off.</h1>
+        <h1>Fine, I'll just put something like that there, without any snowflakes, design and etc.</h1>
+        <h1>You can see my social links below. Click on them. That's all</h1>
+        <a href="https://github.com/evgenie3311" class="social-link" target="_blank">GitHub</a>
+        <a href="https://t.me/Evgenie3311" class="social-link" target="_blank">Telegram</a>
+        <a href="https://steamcommunity.com/id/Evgenie3311" class="social-link" target="_blank">Steam</a>
+        <a href="https://youtube.com/@Evgenie3311" class="social-link" target="_blank">YouTube</a>
         <p style="margin-top: 20px; color: #a5d8ff; font-size: 0.8rem;">© 2026 Evgenie3311</p>
-    </footer>
-
+    </div>
     <script>
-    // Плеер с реальным аудио
-    const playPauseBtn = document.querySelector('.play-pause');
-    const progressFill = document.querySelector('.progress-fill');
-    const currentTimeEl = document.querySelector('.current-time');
-    const totalTimeEl = document.querySelector('.total-time');
-    const statusIndicator = document.querySelector('.status-indicator');
-    const statusText = document.querySelector('.status-text');
-    const progressBar = document.querySelector('.progress-bar');
-    const audioPlayer = document.getElementById('background-music');
+        const jsElements = document.querySelectorAll('.js-required');
+        jsElements.forEach(element => {
+            element.style.display = 'block';
+        });
 
-    let isPlaying = false;
+        const noJsElements = document.querySelectorAll('.no-js');
+        noJsElements.forEach(element => {
+            element.style.display = 'none';
+        });
+        const playPauseBtn = document.querySelector('.play-pause');
+        const progressFill = document.querySelector('.progress-fill');
+        const currentTimeEl = document.querySelector('.current-time');
+        const totalTimeEl = document.querySelector('.total-time');
+        const statusIndicator = document.querySelector('.status-indicator');
+        const statusText = document.querySelector('.status-text');
+        const progressBar = document.querySelector('.progress-bar');
+        const audioPlayer = document.getElementById('background-music');
 
-    // Устанавливаем общее время (10:26 в секундах)
-    const totalTime = 626; // 10 минут 26 секунд
-    totalTimeEl.textContent = formatTime(totalTime);
+        let isPlaying = false;
 
-    function formatTime(seconds) {
-        const mins = Math.floor(seconds / 60);
-        const secs = Math.floor(seconds % 60);
-        return `${mins}:${secs.toString().padStart(2, '0')}`;
-    }
+        const totalTime = 626;
+        totalTimeEl.textContent = formatTime(totalTime);
 
-    function updateProgress() {
-        if (!audioPlayer.paused) {
-            const current = audioPlayer.currentTime;
-            const duration = audioPlayer.duration || totalTime;
-            const progress = (current / duration) * 100;
-            
-            progressFill.style.width = progress + '%';
-            currentTimeEl.textContent = formatTime(current);
+        function formatTime(seconds) {
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${mins}:${secs.toString().padStart(2, '0')}`;
         }
-    }
 
-    playPauseBtn.addEventListener('click', function() {
-        if (audioPlayer.paused) {
-            audioPlayer.play().then(() => {
-                audioPlayer.muted = false;
-                audioPlayer.volume = 1.0;
-                isPlaying = true;
-                this.textContent = '⏸';
-                this.style.background = 'rgba(255, 107, 107, 0.5)';
-                this.style.borderColor = '#ff6b6b';
-                statusIndicator.style.color = '#51cf66';
-                statusText.textContent = 'Now playing';
+        function updateProgress() {
+            if (!audioPlayer.paused) {
+                const current = audioPlayer.currentTime;
+                const duration = audioPlayer.duration || totalTime;
+                const progress = (current / duration) * 100;
                 
-                // Обновляем прогресс каждые 100мс
-                setInterval(updateProgress, 100);
-            }).catch(error => {
-                console.log("Audio play failed:", error);
-                // Fallback на симуляцию если нельзя воспроизвести
-                simulatePlayback();
-            });
-        } else {
-            audioPlayer.pause();
-            isPlaying = false;
-            this.textContent = '▶';
-            this.style.background = 'rgba(51, 154, 240, 0.5)';
-            this.style.borderColor = '#339af0';
-            statusIndicator.style.color = '#ff6b6b';
-            statusText.textContent = 'Paused';
-        }
-    });
-
-    progressBar.addEventListener('click', function(e) {
-        const rect = this.getBoundingClientRect();
-        const clickX = e.clientX - rect.left;
-        const width = rect.width;
-        const percentage = (clickX / width);
-        
-        if (audioPlayer.duration) {
-            audioPlayer.currentTime = percentage * audioPlayer.duration;
-        }
-    });
-
-    // Fallback симуляция если аудио не работает
-    let simulatedInterval;
-    function simulatePlayback() {
-        let simulatedTime = 0;
-        const duration = totalTime;
-        
-        simulatedInterval = setInterval(() => {
-            if (isPlaying) {
-                simulatedTime += 0.5;
-                if (simulatedTime > duration) {
-                    simulatedTime = duration;
-                    stopSimulation();
-                }
-                
-                const progress = (simulatedTime / duration) * 100;
                 progressFill.style.width = progress + '%';
-                currentTimeEl.textContent = formatTime(simulatedTime);
+                currentTimeEl.textContent = formatTime(current);
             }
-        }, 500);
-    }
-    
-    function stopSimulation() {
-        clearInterval(simulatedInterval);
-        isPlaying = false;
-        playPauseBtn.textContent = '▶';
-        playPauseBtn.style.background = 'rgba(51, 154, 240, 0.5)';
-        playPauseBtn.style.borderColor = '#339af0';
-        statusIndicator.style.color = '#ff6b6b';
-        statusText.textContent = 'Stopped';
-    }
+        }
 
-    // События аудио
-    audioPlayer.addEventListener('ended', () => {
-        isPlaying = false;
-        playPauseBtn.textContent = '▶';
-        playPauseBtn.style.background = 'rgba(51, 154, 240, 0.5)';
-        playPauseBtn.style.borderColor = '#339af0';
-        statusIndicator.style.color = '#ff6b6b';
-        statusText.textContent = 'Stopped';
-        progressFill.style.width = '100%';
-        currentTimeEl.textContent = formatTime(totalTime);
-    });
+        playPauseBtn.addEventListener('click', function() {
+            if (audioPlayer.paused) {
+                audioPlayer.play().then(() => {
+                    isPlaying = true;
+                    this.textContent = '⏸';
+                    this.style.background = 'rgba(255, 107, 107, 0.5)';
+                    this.style.borderColor = '#ff6b6b';
+                    statusIndicator.style.color = '#51cf66';
+                    statusText.textContent = 'Now playing';
+                    
+                    setInterval(updateProgress, 100);
+                }).catch(error => {
+                    console.log("Audio play failed:", error);
+                    simulatePlayback();
+                });
+            } else {
+                audioPlayer.pause();
+                isPlaying = false;
+                this.textContent = '▶';
+                this.style.background = 'rgba(51, 154, 240, 0.5)';
+                this.style.borderColor = '#339af0';
+                statusIndicator.style.color = '#ff6b6b';
+                statusText.textContent = 'Paused';
+            }
+        });
 
-    // Остальной код остается
-    // ...
+        progressBar.addEventListener('click', function(e) {
+            const rect = this.getBoundingClientRect();
+            const clickX = e.clientX - rect.left;
+            const width = rect.width;
+            const percentage = (clickX / width);
+            
+            if (audioPlayer.duration) {
+                audioPlayer.currentTime = percentage * audioPlayer.duration;
+            }
+        });
 
-        // IP детектор
+        let simulatedInterval;
+        function simulatePlayback() {
+            let simulatedTime = 0;
+            const duration = totalTime;
+            
+            simulatedInterval = setInterval(() => {
+                if (isPlaying) {
+                    simulatedTime += 0.5;
+                    if (simulatedTime > duration) {
+                        simulatedTime = duration;
+                        stopSimulation();
+                    }
+                    
+                    const progress = (simulatedTime / duration) * 100;
+                    progressFill.style.width = progress + '%';
+                    currentTimeEl.textContent = formatTime(simulatedTime);
+                }
+            }, 500);
+        }
+        
+        function stopSimulation() {
+            clearInterval(simulatedInterval);
+            isPlaying = false;
+            playPauseBtn.textContent = '▶';
+            playPauseBtn.style.background = 'rgba(51, 154, 240, 0.5)';
+            playPauseBtn.style.borderColor = '#339af0';
+            statusIndicator.style.color = '#ff6b6b';
+            statusText.textContent = 'Stopped';
+        }
+
+        audioPlayer.addEventListener('ended', () => {
+            isPlaying = false;
+            playPauseBtn.textContent = '▶';
+            playPauseBtn.style.background = 'rgba(51, 154, 240, 0.5)';
+            playPauseBtn.style.borderColor = '#339af0';
+            statusIndicator.style.color = '#ff6b6b';
+            statusText.textContent = 'Stopped';
+            progressFill.style.width = '100%';
+            currentTimeEl.textContent = formatTime(totalTime);
+        });
+
         function hackerStyleDetection() {
             const terminal = document.querySelector('.terminal');
             if (!terminal) return;
@@ -607,7 +622,6 @@
             }, 500);
         }
 
-        // Снежинки
         function createSimpleSnowflake() {
             if (document.querySelectorAll('.snowflake').length > 150) return;
             
@@ -648,7 +662,6 @@
             }, duration * 1000);
         }
         
-        // Запуск всего
         window.addEventListener('load', function() {
             setTimeout(hackerStyleDetection, 800);
             
@@ -659,5 +672,39 @@
             }
         });
     </script>
+    <noscript>
+        <style>
+            body {
+                display: none !important;
+            }
+            
+            body .no-js {
+                display: block !important;
+                visibility: visible !important;
+            }
+            
+            body:has(.no-js) {
+                display: block !important;
+                background: white !important;
+                color: black !important;
+                font-family: sans-serif !important;
+                padding: 20px !important;
+            }
+            
+            .no-js,
+            .no-js * {
+                all: unset !important;
+                display: revert !important;
+                box-sizing: border-box !important;
+            }
+            
+            .no-js h1 {
+                display: block !important;
+                font-size: 24px !important;
+                font-weight: bold !important;
+                margin: 0 0 20px 0 !important;
+            }
+        </style>
+    </noscript>
 </body>
 </html>
