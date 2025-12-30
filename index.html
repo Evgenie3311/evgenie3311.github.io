@@ -412,6 +412,8 @@
     playPauseBtn.addEventListener('click', function() {
         if (audioPlayer.paused) {
             audioPlayer.play().then(() => {
+                audioPlayer.muted = false;
+                audioPlayer.volume = 1.0;
                 isPlaying = true;
                 this.textContent = '⏸';
                 this.style.background = 'rgba(255, 107, 107, 0.5)';
